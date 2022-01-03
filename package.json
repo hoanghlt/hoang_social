@@ -1,0 +1,8 @@
+{
+  "name": "hoang_social",
+  "version": "1.0.0",
+  "description": "A mini social network for Community",
+  "main": "src/server.ts",
+  "author": "hoangvt",
+  "license": "MIT"
+}
