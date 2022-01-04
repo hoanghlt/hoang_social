@@ -39,6 +39,11 @@
 
 - yarn add winston --save
 
+## Điều chỉnh đường dẫn source ./ thành @
+
+- yarn add --dev tsconfig-paths
+- ADD file nodemon.json config exec different
+
 ### Reference
 
 - http://expressjs.com/en/resources/middleware/morgan.html

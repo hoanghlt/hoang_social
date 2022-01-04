@@ -1,11 +1,11 @@
-import { Route } from "./core/interfaces";
+import { Route } from "@core/interfaces";
 import express, { Router } from "express";
 import mongoose from "mongoose";
 import hpp from "hpp";
 import morgan from "morgan";
 import helmet from "helmet";
 import cors from "cors";
-import { Logger } from "./core/utils";
+import { Logger } from "@core/utils";
 
 class App {
     public app = express.application;
@@ -19,6 +19,7 @@ class App {
 
         this.initializeRoutes(routes);
         this.connectToDatabase();
+        this.initializeMiddleware();
     }
 
     public listen() {
