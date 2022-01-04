@@ -18,3 +18,31 @@
 - git remote add origin https://github.com/hoanghlt/hoang_social.git
 
 - tsc --init
+
+- yarn add mongoose --save
+- yarn add @types/mongoose --dev
+
+- yarn add dotenv
+
+- yarn add cross-env --dev
+
+## middleware
+
+- yarn add hpp helmet morgan cors --save
+  -- hpp param query bẩn
+  -- helmet add bảo mật cho header http request response
+  -- morgan login
+  -- cors bảo mật cấp quyền domain truy cập
+- yarn add @types/hpp @types/morgan @types/cors --dev
+
+## Login
+
+- yarn add winston --save
+
+### Reference
+
+- http://expressjs.com/en/resources/middleware/morgan.html
+- https://www.typescriptlang.org/tsconfig
+- https://github.com/winstonjs/winston
+- https://www.npmjs.com/package/bcryptjs
+- https://www.npmjs.com/package/class-validators
