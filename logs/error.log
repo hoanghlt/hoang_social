@@ -1,0 +1,4 @@
+[31merror[39m: [31m[ERROR] - Status: 400 - Msg: Credential is not valid[39m
+[31merror[39m: [31m[ERROR] - Status: 409 - Msg: Your email 4hoangphuson15031995@gmail.com already exist.[39m
+[31merror[39m: [31m[ERROR] - Status: 500 - Msg: Query was already executed: user.countDocuments({})[39m
+[31merror[39m: [31m[ERROR] - Status: 409 - Msg: Your email 4hoangphuson10@gmail.com already exist.[39m
