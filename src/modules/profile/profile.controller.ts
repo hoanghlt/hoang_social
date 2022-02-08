@@ -5,6 +5,7 @@ import { IProfile } from './profile.interface';
 import { IUser } from '@modules/users';
 import ProfileService from './profile.service';
 import AddExperienceDto from './dtos/add_experience.dto';
+import AddEducationDto from './dtos/add_education.dto';
 
 class ProfileController {
     private profileService = new ProfileService();
@@ -86,7 +87,6 @@ class ProfileController {
             next(error);
         }
     };
-
     public createExperience = async (
         req: Request,
         res: Response,
@@ -116,6 +116,42 @@ class ProfileController {
             const profile = await this.profileService.deleteExperience(
                 req.user.id,
                 expId
+            );
+            res.status(200).json(profile);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    public createEducation = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ) => {
+        const data: AddEducationDto = req.body;
+        const userId = req.user.id;
+        try {
+            const createUserData: IProfile = await this.profileService.addEducation(
+                userId,
+                data
+            );
+            res.status(201).json(createUserData);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    public deleteEducation = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ) => {
+        const eduId: string = req.params.edu_id;
+
+        try {
+            const profile = await this.profileService.deleteEducation(
+                req.user.id,
+                eduId
             );
             res.status(200).json(profile);
         } catch (error) {

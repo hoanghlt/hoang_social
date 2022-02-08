@@ -1,27 +1,23 @@
-import { IExperience, IProfile, ISocial } from './profile.interface';
+import { IEducation, IExperience, IProfile, ISocial } from './profile.interface';
 import { IUser, UserSchema } from '@modules/users';
 import CreateProfileDto from './dtos/create_profile.dto';
 import { HttpException } from '@core/exceptions';
 import ProfileSchema from './profile.model';
-import normalize from 'normalize-url';
+import normalizeUrl from 'normalize-url';
 import AddExperienceDto from './dtos/add_experience.dto';
+import AddEducationDto from './dtos/add_education.dto';
 
 class ProfileService {
     public async getCurrentProfile(userId: string): Promise<Partial<IUser>> {
         const user = await ProfileSchema.findOne({
             user: userId,
-        })
-            .populate('user', ['name', 'avatar'])
-            .exec();
+        }).populate('user', ['name', 'avatar']).exec();
         if (!user) {
             throw new HttpException(400, 'There is no profile for this user');
         }
         return user;
     }
-    public async createProfile(
-        userId: string,
-        profileDto: CreateProfileDto
-    ): Promise<IProfile> {
+    public async createProfile(userId: string, profileDto: CreateProfileDto): Promise<IProfile> {
         const {
             company,
             location,
@@ -40,14 +36,9 @@ class ProfileService {
             user: userId,
             company,
             location,
-            website:
-                website && website != ''
-                    ? normalize(website.toString(), { forceHttps: true })
-                    : '',
+            website: website && website != '' ? normalizeUrl(website.toString(), { forceHttps: true }) : '',
             bio,
-            skills: Array.isArray(skills)
-                ? skills
-                : skills.split(',').map((skill: string) => ' ' + skill.trim()),
+            skills: Array.isArray(skills) ? skills : skills.split(',').map((skill: string) => ' ' + skill.trim()),
             status,
         };
 
@@ -61,7 +52,7 @@ class ProfileService {
 
         for (const [key, value] of Object.entries(socialFields)) {
             if (value && value.length > 0) {
-                socialFields[key] = normalize(value, { forceHttps: true });
+                socialFields[key] = normalizeUrl(key, { forceHttps: true });
             }
         }
         profileFields.social = socialFields;
@@ -108,6 +99,7 @@ class ProfileService {
         return profile;
     };
 
+
     public deleteExperience = async (userId: string, experienceId: string) => {
         const profile = await ProfileSchema.findOne({ user: userId }).exec();
 
@@ -117,6 +109,40 @@ class ProfileService {
 
         profile.experience = profile.experience.filter(
             (exp) => exp._id.toString() !== experienceId
+        );
+        await profile.save();
+        return profile;
+    };
+
+    public addEducation = async (
+        userId: string,
+        education: AddEducationDto
+    ) => {
+        const newEdu = {
+            ...education,
+        };
+
+        const profile = await ProfileSchema.findOne({ user: userId }).exec();
+        if (!profile) {
+            throw new HttpException(400, 'There is not profile for this user');
+        }
+
+        profile.education.unshift(newEdu as IEducation);
+        await profile.save();
+
+        return profile;
+    };
+
+
+    public deleteEducation = async (userId: string, educationId: string) => {
+        const profile = await ProfileSchema.findOne({ user: userId }).exec();
+
+        if (!profile) {
+            throw new HttpException(400, 'There is not profile for this user');
+        }
+
+        profile.education = profile.education.filter(
+            (edu) => edu._id.toString() !== educationId
         );
         await profile.save();
         return profile;

@@ -196,3 +196,53 @@
 [32minfo[39m: [32mServer is listening on port 5000[39m
 [32minfo[39m: [32mDatabase connected...[39m
 [32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[31merror[39m: [31m[ERROR] - Status: 500 - Msg: Cannot find module 'fix-esm'[39m
+[31mRequire stack:[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\profile.service.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\profile.controller.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\profile.route.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\index.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\server.ts[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[31merror[39m: [31m[ERROR] - Status: 500 - Msg: Invalid URL[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m
+[32minfo[39m: [32mDatabase connected...[39m
+[32minfo[39m: [32mServer is listening on port 5000[39m

@@ -2,3 +2,11 @@
 [31merror[39m: [31m[ERROR] - Status: 409 - Msg: Your email 4hoangphuson15031995@gmail.com already exist.[39m
 [31merror[39m: [31m[ERROR] - Status: 500 - Msg: Query was already executed: user.countDocuments({})[39m
 [31merror[39m: [31m[ERROR] - Status: 409 - Msg: Your email 4hoangphuson10@gmail.com already exist.[39m
+[31merror[39m: [31m[ERROR] - Status: 500 - Msg: Cannot find module 'fix-esm'[39m
+[31mRequire stack:[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\profile.service.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\profile.controller.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\profile.route.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\modules\profile\index.ts[39m
+[31m- W:\Works\Studies\TEDU\hoang_social\src\server.ts[39m
+[31merror[39m: [31m[ERROR] - Status: 500 - Msg: Invalid URL[39m
